@@ -39,8 +39,8 @@ func split(rawTags string) *pveSDK.Tags {
 	if rawTags == "" {
 		return &tags
 	}
-	tagIter := strings.SplitSeq(rawTags, ";")
-	for tag := range tagIter {
+	tagArray := strings.Split(rawTags, ";")
+	for _, tag := range tagArray {
 		tagSubArrays := strings.Split(tag, ",")
 		if len(tagSubArrays) > 1 {
 			tmpTags := make([]pveSDK.Tag, len(tagSubArrays))

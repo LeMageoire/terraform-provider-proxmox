@@ -1,6 +1,8 @@
 module github.com/Telmate/terraform-provider-proxmox/v2
 
-go 1.24
+go 1.23.0
+
+toolchain go1.23.12
 
 require (
 	github.com/Telmate/proxmox-api-go v0.0.0-20250720103000-db6e9b52411c
@@ -69,3 +71,5 @@ require (
 	google.golang.org/grpc v1.72.1 // indirect
 	google.golang.org/protobuf v1.36.6 // indirect
 )
+
+replace github.com/Telmate/proxmox-api-go => github.com/LeMageoire/proxmox-api-go v1.0.0
